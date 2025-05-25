@@ -22,7 +22,12 @@ const Navbar = () => {
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         <h1 className="text-2xl font-bold text-orange-400">🏀 BasketStats</h1>
         <div className="space-x-6 text-sm">
-          <Link to="/home" className="hover:text-orange-300 transition">Home</Link>
+          <Link to="/" className="hover:text-orange-300 transition">Home</Link>
+          <Link to="/games" className="hover:text-orange-300 transition">Jogos</Link>
+          <Link to="/team" className="hover:text-orange-300 transition">Time</Link>
+          <Link to="/players" className="hover:text-orange-300 transition">Jogadores</Link>
+          <Link to="/stats" className="hover:text-orange-300 transition">Estatísticas</Link>
+          <Link to="/schedule" className="hover:text-orange-300 transition">Calendário</Link>
           <ThemeToggle />
           {!token ? (
             <>

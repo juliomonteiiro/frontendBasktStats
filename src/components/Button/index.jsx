@@ -11,7 +11,7 @@ const Button = ({ children, onClick, type = 'button', className = '' }) => (
     rounded-md
     transition duration-200 ease-in-out
     bg-orange text-white
-    hover:bg-blue dark:bg-orange-400 dark:text-gray-900 dark:hover:bg-blue
+    hover:bg-blue dark:bg-orange-500 dark:text-gray-900 dark:hover:bg-blue
     focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-1
       ${className}
     `}

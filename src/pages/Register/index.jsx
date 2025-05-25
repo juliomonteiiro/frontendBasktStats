@@ -31,14 +31,14 @@ function Register() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4">
       <div className="max-w-md w-full bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
-        <h1 className="text-3xl font-semibold text-center mb-6 text-orange-500 dark:text-orange-400">
+        <h1 className="text-3xl font-semibold text-center mb-6 text-orange-500 dark:text-orange-500">
           Criar Conta
         </h1>
         <Input value={name} onChange={(e) => setName(e.target.value)} placeholder="Nome" className="mb-4" />
         <Input value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Usuário" className="mb-4" />
         <Input value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Email" className="mb-4" />
-        <Input value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Senha" type="password" className="mb-4" />
-        <Input value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirmar Senha" type="password" className="mb-6" />
+        <Input value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Senha" type="password" isPassword={true}  className="mb-4" />
+        <Input value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} placeholder="Confirmar Senha" type="password" isPassword={true}  className="mb-6" />
         <Button onClick={handleRegister}>Registrar</Button>
 
         <p className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">

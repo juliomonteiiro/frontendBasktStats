@@ -21,7 +21,7 @@ function Login({ setToken }) {
       localStorage.setItem('token', token);
       setToken(token);
       toast.success('Login bem-sucedido! Redirecionando...');
-      setTimeout(() => navigate('/home'), 1500);
+      setTimeout(() => navigate('/'), 1500);
     } else {
       toast.error('Falha no login. Verifique suas credenciais.');
     }
@@ -30,7 +30,7 @@ function Login({ setToken }) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 dark:bg-gray-900 px-4">
       <div className="max-w-md w-full bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg">
-        <h1 className="text-3xl font-semibold text-center mb-6 text-orange-500 dark:text-orange-400">
+        <h1 className="text-3xl font-semibold text-center mb-6 text-orange-500 dark:text-orange-500">
           Bem-vindo de volta
         </h1>
 
@@ -45,6 +45,7 @@ function Login({ setToken }) {
           onChange={(e) => setPassword(e.target.value)}
           placeholder="Senha"
           type="password"
+          isPassword={true} 
           className="mb-6"
         />
 
@@ -52,7 +53,7 @@ function Login({ setToken }) {
 
         <p className="mt-4 text-center text-sm text-gray-600 dark:text-gray-400">
           Não tem uma conta?{' '}
-          <Link to="/register" className="text-orange-500 hover:underline">
+          <Link to="/register" className="text-orange-500 hover:text-orange-600 dark:text-orange-500 font-medium">
             Registre-se
           </Link>
         </p>
