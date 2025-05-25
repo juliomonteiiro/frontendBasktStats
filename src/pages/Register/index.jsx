@@ -19,12 +19,13 @@ function Register() {
       return;
     }
 
-    const success = await registerUser(name, username, email, password);
-    if (success) {
+    const result = await registerUser(name, username, email, password, confirmPassword);
+    
+    if (result.success) {
       toast.success('Registro bem-sucedido! Redirecionando...');
       setTimeout(() => navigate('/login'), 1500);
     } else {
-      toast.error('Falha no registro. Tente novamente.');
+      toast.error(result.message || 'Falha no registro. Tente novamente.');
     }
   };
 
